@@ -49,6 +49,7 @@ pipeline {
    }
    {
    stage('Push image vers DockerHub') {
+   steps {
    echo "login DockerHub"
    sh "docker login -u ${DOCKER_USR} -p ${DOCKER_PSW}"
    echo "tag images"
