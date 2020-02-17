@@ -23,6 +23,7 @@ pipeline {
 
    stage('Git Clone') { 
    steps {
+   sh "docker rm maven-webapp -f"
       // Get some code from a GitHub repository
       git 'https://github.com/walidsaad/maven-jenkins-pipeline.git'
    }
